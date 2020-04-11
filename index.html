@@ -1,16 +1,296 @@
-<html>
-  <body>
-    <script>
-      (async () => {
-        const response = await fetch('https://api.github.com/repos/cyberhubarchive/archive/contents/');
-        const data = await response.json();
-        let htmlString = '<ul>';
-        for (let file of data) {
-          htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-        }
-        htmlString += '</ul>';
-        document.getElementsByTagName('body')[0].innerHTML = htmlString;
-      })()
-    </script>
-  <body>
-</html>
+<body bgcolor="#0c0c11" text="#ebedf2">
+<br>
+├── Stress Testing
+│   ├── HTTP
+│   │   ├── BoostHTTP.py
+│   │   ├── GHP.c
+│   │   ├── Hibernet.py
+│   │   ├── HTTP Bypass NodeJS.zip
+│   │   ├── HTTP Flood GoLang.7z
+│   │   ├── http-MDR.py
+│   │   ├── rudy.c
+│   │   ├── Serpico NodeJS collection.zip
+│   │   └── slow.c
+│   ├── OTHER PROTOCOLS
+│   │   ├── chaos.c
+│   │   ├── gre.c
+│   │   ├── igmp.c
+│   │   └── Massacre.c
+│   ├── TCP
+│   │   ├── ace.c
+│   │   ├── ack.c
+│   │   ├── atcp.c
+│   │   ├── bogus.c
+│   │   ├── csyn.c
+│   │   ├── dominate.c
+│   │   ├── ecn.c
+│   │   ├── essyn.c
+│   │   ├── fin.c
+│   │   ├── flux.c
+│   │   ├── frag.c
+│   │   ├── issyn.c
+│   │   ├── juno.c
+│   │   ├── kittenzlauncher.py
+│   │   ├── psh.c
+│   │   ├── rst.c
+│   │   ├── sACK.c
+│   │   ├── se.c
+│   │   ├── stcp.c
+│   │   ├── sw.c
+│   │   ├── sybexv3.c
+│   │   ├── syn.c
+│   │   ├── synfin.c
+│   │   ├── TCP-Amplification BGP
+│   │   │   ├── tcpamp.c
+│   │   │   └── tcpamp-scanner.bash
+│   │   ├── urg.c
+│   │   ├── WIZARD.c
+│   │   ├── xack.c
+│   │   ├── xmas.c
+│   │   ├── xsyn.c.c
+│   │   ├── ZAP.c
+│   │   └── zsyn.c
+│   └── UDP
+│       ├── Amplifications
+│       │   ├── ADNS Amplification
+│       │   │   ├── adns.c
+│       │   │   └── adnsscan.c
+│       │   ├── AFS3 Amplification
+│       │   │   ├── 7001.c
+│       │   │   └── scan.c
+│       │   ├── AMANDA Amplification
+│       │   │   ├── ama.c
+│       │   │   └── scan.c
+│       │   ├── APPLE FILE Amplification
+│       │   │   └── afp.c
+│       │   ├── Brothers in Arms Amplification
+│       │   │   ├── boa.c
+│       │   │   └── scan.c
+│       │   ├── Calendar Access Protocol Amplification
+│       │   │   ├── cap.c
+│       │   │   └── scan.c
+│       │   ├── CAU Amplification
+│       │   │   ├── cau.c
+│       │   │   └── scan.c
+│       │   ├── CHARGEN Amplification
+│       │   │   ├── chargen.c
+│       │   │   └── chargen_scanner.c
+│       │   ├── COAP Amplification
+│       │   │   ├── coap.c
+│       │   │   ├── filter.py
+│       │   │   └── scan.txt
+│       │   ├── DAYTIME Amplification
+│       │   │   ├── d.c
+│       │   │   └── dtscan.c
+│       │   ├── DNP Amplification
+│       │   │   ├── d.c
+│       │   │   └── scan.c
+│       │   ├── DNS Amplification
+│       │   │   ├── dnsamp.c
+│       │   │   └── dns_scanner.c
+│       │   ├── ECHO Amplification
+│       │   │   ├── echo.c
+│       │   │   └── echoscan.c
+│       │   ├── EPMAP Amplification
+│       │   │   ├── e.c
+│       │   │   └── scan.c
+│       │   ├── FLEXLM Amplification
+│       │   │   ├── f.c
+│       │   │   └── scan.c
+│       │   ├── Ground Control Amplification
+│       │   │   ├── g.c
+│       │   │   └── scan.c
+│       │   ├── HALO Amplification
+│       │   │   ├── halo.c
+│       │   │   └── haloscan.c
+│       │   ├── IBM B2 Amplification
+│       │   │   ├── db2.c
+│       │   │   └── db2_scanner.c
+│       │   ├── INSTEON PLM Amplification
+│       │   │   └── insteon.c
+│       │   ├── IPMI Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── ISAKMP Amplification
+│       │   │   ├── isakmp.c
+│       │   │   └── isakmpscan.c
+│       │   ├── iVocalize Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── JENKINS Amplification
+│       │   │   ├── filter.bash
+│       │   │   └── Jenkins.c
+│       │   ├── L2TP Amplification
+│       │   │   ├── 1701.c
+│       │   │   └── scan.c
+│       │   ├── LANDESK Amplification
+│       │   │   └── landesk_rc.c
+│       │   ├── LDAP Amplification
+│       │   │   ├── ldap.c
+│       │   │   └── ldapscan.c
+│       │   ├── LLMNR Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── MAC-Serialnumberd Amplification
+│       │   │   ├── mac.c
+│       │   │   └── macscan.c
+│       │   ├── MDNS Amplification
+│       │   │   ├── mdns.c
+│       │   │   └── mdns_scanner.c
+│       │   ├── Memcache Amplification
+│       │   │   ├── filter.bash
+│       │   │   ├── mem.c
+│       │   │   └── scanner.c
+│       │   ├── MSSQL Amplification
+│       │   │   ├── mssql.c
+│       │   │   └── mssql_scanner.c
+│       │   ├── Mumble Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── NETBIOS Amplification
+│       │   │   ├── netbios.c
+│       │   │   └── netbios_scanner.c
+│       │   ├── NetINFO Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── NTP Amplification
+│       │   │   ├── ntp.c
+│       │   │   └── ntpscanner.c
+│       │   ├── Palace Amplification
+│       │   │   └── i.c
+│       │   ├── PCAnywhere Amplification
+│       │   │   ├── pc.c
+│       │   │   └── pcscan.c
+│       │   ├── PORTMAP Amplification
+│       │   │   ├── zudp_attack_script.c
+│       │   │   └── zudp_scanner.c
+│       │   ├── QUAKE Amplification
+│       │   │   ├── quake.c
+│       │   │   └── quake_scanner.c
+│       │   ├── RAIN Amplification
+│       │   │   ├── rain.c
+│       │   │   └── rainscan.c
+│       │   ├── RIP Amplification
+│       │   │   ├── rip.c
+│       │   │   └── rip_scanner.c
+│       │   ├── RPLAY Amplification
+│       │   │   ├── attack.c
+│       │   │   └── scan.c
+│       │   ├── RTTP Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── SENTINEL Amplification
+│       │   │   ├── SENTINEL.c
+│       │   │   └── SENTINEL_scanner.c
+│       │   ├── SIP Amplification
+│       │   │   ├── 5060_SIP_PROBE.pkt
+│       │   │   ├── filter.sh
+│       │   │   └── SIP.c
+│       │   ├── SLP Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── SNMP Amplification
+│       │   │   ├── snmp_2.c
+│       │   │   ├── snmp.c.c
+│       │   │   └── snmp_scanner.c
+│       │   ├── SOAP-WSD Amplification
+│       │   │   ├── filter.bash
+│       │   │   └── soap.c
+│       │   ├── SOLID-MUX Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── SRVLOC Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── SSDP Amplification
+│       │   │   ├── ssdp.c
+│       │   │   ├── ssdpscan.c
+│       │   │   └── ssdpscan.py
+│       │   ├── Steam Amplification
+│       │   │   ├── i.c
+│       │   │   └── steamscan.c
+│       │   ├── STUN Amplification
+│       │   │   ├── 36.c
+│       │   │   └── 36scan.c
+│       │   ├── Sun-RPC (portmap) Amplification
+│       │   │   ├── portmap.c
+│       │   │   └── scan.c
+│       │   ├── TFTP Amplification
+│       │   │   ├── tftp.c
+│       │   │   └── tftp_scanner.c
+│       │   ├── TIME Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── TS3 Amplification
+│       │   │   ├── ts3.c
+│       │   │   └── ts3_scanner.c
+│       │   ├── UDPCast Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── Unreal Tournament Amplification
+│       │   │   ├── heartbeat.c
+│       │   │   └── heartbeat_scanner.c
+│       │   ├── VALVE Amplification
+│       │   │   ├── i.c
+│       │   │   └── scan.c
+│       │   ├── Ventrilo Amplification
+│       │   │   ├── vent.c
+│       │   │   └── ventscan.c
+│       │   ├── WAL Amplification
+│       │   │   ├── walscan.c
+│       │   │   └── walt.c
+│       │   ├── WINS Amplification
+│       │   │   ├── 42.c
+│       │   │   └── scan.c
+│       │   └── XDMCP Amplification
+│       │       ├── xdmcp.c
+│       │       └── xdmcpscan.c
+│       ├── ovh-slavic.c
+│       ├── udprand.c
+│       ├── UDP_Telnet.c
+│       ├── UDP_VSE2.c
+│       ├── UDP_VSE.c
+│       └── UDP_xts3.c
+└── Webshells
+    └── PHP
+        ├── 0x00_shell.txt
+        ├── ajax_php_command_shell.txt
+        ├── andr3a92.txt
+        ├── antichat.txt
+        ├── ayt_shell.txt
+        ├── azrailphp_v1.0.txt
+        ├── b374k.txt
+        ├── Bl0od3r_priv8_shell.txt
+        ├── bypassuser.txt
+        ├── coderz_shell.txt
+        ├── cshell.txt
+        ├── ctt_sh.txt
+        ├── cybershell.txt
+        ├── dark_shell.txt
+        ├── dc3_shell_priv8.txt
+        ├── dive_shell_1.0.txt
+        ├── dx.txt
+        ├── gsc_shell.txt
+        ├── hantu_shell.txt
+        ├── hidden_shell.txt
+        ├── iMHaPFtp.txt
+        ├── iron_shell.txt
+        ├── lostdc_shell.txt
+        ├── macker_shell.txt
+        ├── my_shell.txt
+        ├── Mysql interface v1.0.txt
+        ├── NCC_Shell.txt
+        ├── nefasta_shell.txt
+        ├── NetworkFileManagerPHP.txt
+        ├── nexplorer_shell.txt
+        ├── okno_shell.txt
+        ├── OnBoomShell.txt
+        ├── php-backdoor.txt
+        ├── php_jackal.txt
+        ├── PHPRemoteView.txt
+        ├── PHVayv.txt
+        ├── remview.txt
+        ├── s101.txt
+        ├── SimAttacker - Vrsion 1.0.0 - priv8 4 My friend.txt
+        ├── staker_shell.txt
+        └── stres_bypass.txt
